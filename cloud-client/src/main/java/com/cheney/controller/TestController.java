@@ -18,8 +18,10 @@ public class TestController {
     private String profile;
 
     @RequestMapping("/test")
-    public String test() {
+    public String test() throws InterruptedException {
         logger.info(profile);
+//        throw new RuntimeException();
+        Thread.sleep(3000);
         return discoveryClient.getServices() + "2";
     }
 
