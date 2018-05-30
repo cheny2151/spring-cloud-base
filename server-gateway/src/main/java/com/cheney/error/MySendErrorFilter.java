@@ -1,7 +1,8 @@
 package com.cheney.error;
 
 import com.netflix.zuul.context.RequestContext;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.cloud.netflix.zuul.filters.post.SendErrorFilter;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +11,7 @@ import java.io.IOException;
 @Component
 public class MySendErrorFilter extends SendErrorFilter {
 
-    private final Logger logger = Logger.getLogger(this.getClass());
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
     @Override
     public Object run() {
