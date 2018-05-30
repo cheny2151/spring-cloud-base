@@ -15,8 +15,8 @@ public class TestController {
 
     @Autowired
     private DiscoveryClient discoveryClient;
-//    @Value("${profile}")
-//    private String profile;
+    @Value("${profile}")
+    private String profile;
 
     @RequestMapping("/test")
     public String test() {
