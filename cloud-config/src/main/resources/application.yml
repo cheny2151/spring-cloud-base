@@ -1,4 +1,4 @@
-#»ù´¡ÅäÖÃ
+#åŸºç¡€é…ç½®
 spring:
  application:
   name: config-server
@@ -15,7 +15,7 @@ spring:
 server:
  port: 8008
 
-#×¢²áÖĞĞÄeureka
+#æ³¨å†Œä¸­å¿ƒ
 eureka:
  client:
   serviceUrl:

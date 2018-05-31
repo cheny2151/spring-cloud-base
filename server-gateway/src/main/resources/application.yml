@@ -1,30 +1,29 @@
-#基础配置
+#鍩虹閰嶇疆
 spring:
  application:
   name: server-gateway
 
 server:
  port: 80
-#logging.config=classpath:log4j2.xml
 
-#注册中心
+#娉ㄥ唽涓績
 eureka:
  client:
   serviceUrl:
    defaultZone: http://localhost:8002/eureka/
 
-#serviceId路由配置
+#serviceId璺敱閰嶇疆
 zuul:
  routes:
   eureka-client:
    path: /service/**
    serviceId: eureka-client
- #禁用默认错误处理
+#绂佺敤榛樿閿欒澶勭悊
  SendErrorFilter:
   error:
    disable: true
 
-#熔断超时 hystrix.command.<default/serviceId>.execution.isolation.thread.timeoutInMilliseconds
+#鐔旀柇瓒呮椂 hystrix.command.<default/serviceId>.execution.isolation.thread.timeoutInMilliseconds
 hystrix:
  command:
   default:
@@ -33,12 +32,12 @@ hystrix:
      thread:
       timeoutInMilliseconds: 25000
 
-#ribbon超时设置
+#ribbon瓒呮椂璁剧疆
 ribbon:
  ReadTimeout: 5000
  ConnectTimeout: 5000
 
-#url路由配置
+#url璺敱閰嶇疆
 #zuul.routes.eureka-client.path=/service/**
 #zuul.routes.eureka-client.url=http://localhost:8080/
 #zuul.host.connect-timeout-millis=5000
