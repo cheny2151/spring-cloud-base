@@ -1,0 +1,22 @@
+#»ù´¡ÅäÖÃ
+spring:
+ application:
+  name: config-server
+ cloud:
+  config:
+   server:
+    git:
+     uri: https://github.com/cheny2151/spring-cloud-config
+     search-paths: config/resources
+     username:
+     password:
+   label: master
+
+server:
+ port: 8008
+
+#×¢²áÖĞĞÄeureka
+eureka:
+ client:
+  serviceUrl:
+   defaultZone: http://localhost:8002/eureka/

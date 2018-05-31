@@ -15,7 +15,7 @@
         <console name="Console" target="SYSTEM_OUT">
 
             <!--输出日志的格式-->
-            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+            <PatternLayout pattern="[cheney][%d{yyyy-MM-dd HH:mm:ss}] [%p] - %l - %m%n"/>
 
         </console>
 
@@ -85,7 +85,7 @@
 
         <logger name="org.mybatis" level="INFO" />
 
-        <root level="all">
+        <root level="INFO">
             <appender-ref ref="Console"/>
             <appender-ref ref="RollingFileInfo"/>
             <appender-ref ref="RollingFileWarn"/>
