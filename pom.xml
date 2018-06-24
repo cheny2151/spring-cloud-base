@@ -12,6 +12,7 @@
         <module>cloud-server</module>
         <module>cloud-client</module>
         <module>server-gateway</module>
+        <module>cloud-server_2</module>
     </modules>
 
     <parent>

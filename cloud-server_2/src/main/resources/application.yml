@@ -1,0 +1,12 @@
+spring:
+ application:
+  name: feign-test
+
+server:
+ port: 8081
+
+#注册中心eureka
+eureka:
+ client:
+  serviceUrl:
+   defaultZone: http://localhost:8002/eureka/
