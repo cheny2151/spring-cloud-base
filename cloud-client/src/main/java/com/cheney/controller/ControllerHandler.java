@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ControllerAdvice
 public class ControllerHandler {
 
-    @Value("${profile}")
-    private String profile;
-
     @ExceptionHandler
     @ResponseBody
     public String errorPage(Exception e) {

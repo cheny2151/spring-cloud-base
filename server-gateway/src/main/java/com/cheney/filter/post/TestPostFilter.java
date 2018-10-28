@@ -1,8 +1,7 @@
-package com.cheney.post;
+package com.cheney.filter.post;
 
 import com.netflix.zuul.ZuulFilter;
 import org.springframework.stereotype.Component;
-import org.springframework.web.context.request.RequestContextHolder;
 
 @Component
 public class TestPostFilter extends ZuulFilter {
@@ -24,7 +23,6 @@ public class TestPostFilter extends ZuulFilter {
 
     @Override
     public Object run() {
-        System.out.println("---post--");
         return null;
     }
 

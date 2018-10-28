@@ -1,8 +1,8 @@
-package com.cheney.route.params;
+package com.cheney.filter.route.params;
 
 import com.alibaba.fastjson.JSON;
-import com.cheney.route.params.filter.ParamFilterHolder;
-import com.cheney.route.params.filter.Params;
+import com.cheney.bean.Params;
+import com.cheney.filter.route.params.filter.ParamFilterHolder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
@@ -24,6 +24,7 @@ import java.util.Map;
  * 参数过滤器
  */
 @Slf4j
+@Component
 public class RouteParamsFilter extends ZuulFilter {
 
     @Resource(name = "paramFilterHolder")
@@ -42,7 +43,8 @@ public class RouteParamsFilter extends ZuulFilter {
     @Override
     public boolean shouldFilter() {
         RequestContext currentContext = RequestContext.getCurrentContext();
-        return currentContext.getRouteHost() != null;
+//        return currentContext.getRouteHost() != null;
+        return false;
     }
 
     @Override

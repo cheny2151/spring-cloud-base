@@ -1,4 +1,4 @@
-package com.cheney.gatewayapplication;
+package com.cheney.application;
 
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

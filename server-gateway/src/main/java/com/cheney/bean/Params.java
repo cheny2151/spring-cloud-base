@@ -1,4 +1,4 @@
-package com.cheney.route.params.filter;
+package com.cheney.bean;
 
 import java.util.ArrayList;
 import java.util.List;

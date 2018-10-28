@@ -1,4 +1,4 @@
-package com.cheney.route.params.filter;
+package com.cheney.filter.route.params.filter;
 
 public abstract class AbstractParamFilter implements ParamFilter {
 
